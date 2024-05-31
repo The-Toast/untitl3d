@@ -1,15 +1,26 @@
 'use client'
 
 import React from 'react'
+
 import {ThemeProvider} from '@emotion/react'
-import {Theme} from "@src/styles";
+import {GlobalStyle, Theme, DarkTheme} from 'styles'
+
+import {useDarkStore} from 'stores'
 
 export default function Providers(
   {children}: {children: React.ReactNode}
 ) {
+  const {isDark} = useDarkStore()
   return (
-    <ThemeProvider theme={Theme}>
-      {children}
+    <ThemeProvider theme={isDark ? DarkTheme : Theme}>
+      <GlobalStyle />
+      <Wrapper>{children}</Wrapper>
     </ThemeProvider>
   )
 }
+
+import styled from '@emotion/styled'
+
+const Wrapper = styled.div`
+  
+`

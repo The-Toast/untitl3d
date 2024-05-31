@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Providers from './providers'
+
 import type {Metadata} from 'next'
 
 export const metadata: Metadata = {
@@ -13,7 +15,9 @@ export default function RootLayout(
   return (
     <html lang='ko'>
       <body>
-      {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   )

@@ -1,0 +1,1 @@
+export {default as useDarkStore} from './useDarkStore'
