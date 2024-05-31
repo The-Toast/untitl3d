@@ -8,7 +8,7 @@ import {useDarkStore} from 'stores'
 
 import {css} from '@emotion/react'
 
-import {SunIcon, MoonIcon} from 'assets/svg'
+import {SunIcon, MoonIcon} from 'assets'
 
 import * as S from './style'
 
