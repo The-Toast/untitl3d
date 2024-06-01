@@ -1,4 +1,4 @@
-/** @jsxImportSource @emotion/react */
+'use client'
 
 import {Global, css} from '@emotion/react'
 
@@ -9,7 +9,7 @@ export function GlobalStyle() {
         
       body,
       * {
-        font-family: 
+        font-family:
                 Pretendard,
                 -apple-system,
                 system-ui,

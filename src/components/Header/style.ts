@@ -7,6 +7,7 @@ export const Header = styled.header`
   width: 100vw;
   height: 4rem;
   justify-content: center;   
+  background: ${({theme}) => theme.ui.headerColor};
 `
 
 export const HeaderContent = styled.div`

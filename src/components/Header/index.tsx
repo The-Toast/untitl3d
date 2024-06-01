@@ -1,12 +1,8 @@
-/** @jsxImportSource @emotion/react */
-
 'use client'
 
 import {useEffect} from 'react'
 
 import {useDarkStore} from 'stores'
-
-import {css} from '@emotion/react'
 
 import {SunIcon, MoonIcon} from 'assets'
 
@@ -17,27 +13,25 @@ export default function Header() {
 
   const handleClick = () => {
     setIsDark(!isDark)
-    localStorage.setItem('dark', String(isDark))
+    localStorage.setItem('dark', String(!isDark))
   }
 
   useEffect(() => {
     const localState = localStorage.getItem('dark')
-    if (localState) setIsDark(localState == 'false')
+    if (localState) setIsDark(localState == 'true')
   }, [])
 
+  console.log(isDark)
+
   return (
-    <S.Header
-      css={css`
-        background: ${isDark ? '#fff' : '#23272a'};
-      `}
-    >
+    <S.Header>
       <S.HeaderContent>
         <S.LogoLink href='/'>
           <Title>Hello, World!</Title>
         </S.LogoLink>
         <S.HeaderInner>
           <ToggleBtn onClick={handleClick}>
-            {isDark ? <MoonIcon /> : <SunIcon />}
+            {isDark ? <SunIcon /> : <MoonIcon />}
           </ToggleBtn>
         </S.HeaderInner>
       </S.HeaderContent>
