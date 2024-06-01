@@ -1,1 +1,0 @@
-import '/Users/yechan0616/Desktop/untitl3d/node_modules/.pnpm/@storybook+core-server@8.1.5_prettier@3.2.5_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/core-server/dist/presets/common-manager.js';
