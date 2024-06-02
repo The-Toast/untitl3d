@@ -19,9 +19,7 @@ export default function Header() {
   useEffect(() => {
     const localState = localStorage.getItem('dark')
     if (localState) setIsDark(localState == 'true')
-  }, [])
-
-  console.log(isDark)
+  }, [setIsDark])
 
   return (
     <S.Header>
